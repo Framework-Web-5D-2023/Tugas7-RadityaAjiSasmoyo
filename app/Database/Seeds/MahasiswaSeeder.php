@@ -1,37 +1,111 @@
 <?php
-
 namespace App\Database\Seeds;
-
 use CodeIgniter\Database\Seeder;
-use CodeIgniter\I18n\Time;
-use Faker\Factory;
 
-class MahasiswaSeeder extends Seeder
-{
-
-  public function run()
-  {
-    // use the factory to create a Faker\Generator instance
-    $faker = Factory::create();
-    $data = [];
-    for ($i = 0; $i < 10; $i++) {
-      $newData = [
-        'nama' => $faker->name(),
-        'npm'    => $faker->randomNumber(9, true),
-        'prodi'    => 'Teknik Informatika',
-        'minat'    => 'Web Developer',
-        'domisili'    => $faker->city(),
-        'jenis_kelamin'    => 'L',
-        'image'    => "default.jpg",
-        'created_at'    =>  $faker->date(),
-      ];
-      $data[] = $newData;
-    }
-
-    // Simple Queries
-    // $this->db->query('INSERT INTO users (username, email) VALUES(:username:, :email:)', $data);
-
-    // Using Query Builder
-    $this->db->table('mahasiswa')->insertBatch($data);
-  }
+class MahasiswaSeeder extends Seeder {
+	public function run() {
+		$data = [
+		  [
+			'nama' => "Admin",
+			'npm'    => "202020202020",
+			'prodi'    => 'Teknik Informatika',
+			'minat'    => 'Web Developer',
+			'domisili'    => "Karawang",
+			'jenis_kelamin'    => 'L',
+			'image'    => "default.jpg",
+			'created_at'    =>  "1999-01-01",
+		  ],
+		  [
+			'nama' => "Admin2",
+			'npm'    => "202020202010",
+			'prodi'    => 'Sistem Informasi',
+			'minat'    => 'Android Developer',
+			'domisili'    => "Karawang",
+			'jenis_kelamin'    => 'L',
+			'image'    => "default.jpg",
+			'created_at'    =>  "2000-01-01",
+		  ],
+		  [
+			'nama' => "Raditya Aji Sasmoyo",
+			'npm'    => "2010631170111",
+			'prodi'    => 'Informatika',
+			'minat'    => 'Web Developer',
+			'domisili'    => "Karawang",
+			'jenis_kelamin'    => 'L',
+			'image'    => "1700807676_711062b91b19173babd9.jpg",
+			'created_at'    =>  "2023-11-24",
+		  ],
+		  [
+			'nama' => "Ringga Akbar",
+			'npm'    => "2010631170109",
+			'prodi'    => 'Informatika',
+			'minat'    => 'Game Developer',
+			'domisili'    => "Surakarta",
+			'jenis_kelamin'    => 'L',
+			'image'    => "1701258374_d2fa04887b7059ab1049.png",
+			'created_at'    =>  "2023-11-01",
+		  ],
+		  [
+			'nama' => "Indra Fauzi Idris",
+			'npm'    => "202020202010",
+			'prodi'    => 'Informatika',
+			'minat'    => 'Game Developer',
+			'domisili'    => "Purwakarta",
+			'jenis_kelamin'    => 'L',
+			'image'    => "1701258574_a3cf531f41251b883818.png",
+			'created_at'    =>  "2023-11-01",
+		  ],
+		  [
+			'nama' => "Farhan Assegaf",
+			'npm'    => "2010631170113",
+			'prodi'    => 'Informatika',
+			'minat'    => 'Computer Parts',
+			'domisili'    => "Karawang",
+			'jenis_kelamin'    => 'L',
+			'image'    => "farhan_assegaf.jpg",
+			'created_at'    =>  "2023-11-01",
+		  ],
+		  [
+			'nama' => "Alif Jabar",
+			'npm'    => "201063170112",
+			'prodi'    => 'Informatika',
+			'minat'    => 'Web Developer',
+			'domisili'    => "Karawang",
+			'jenis_kelamin'    => 'L',
+			'image'    => "alif_jabar.jpg",
+			'created_at'    =>  "2023-10-27",
+		  ],
+		  [
+			'nama' => "Nanda Sukarno",
+			'npm'    => "201063170113",
+			'prodi'    => 'Informatika',
+			'minat'    => 'Project Planner',
+			'domisili'    => "Karawang",
+			'jenis_kelamin'    => 'L',
+			'image'    => "default.jpg",
+			'created_at'    =>  "2023-12-05",
+		  ],
+		  [
+			'nama' => "Alvian Vito",
+			'npm'    => "201063170114",
+			'prodi'    => 'Informatika',
+			'minat'    => 'Web Developer',
+			'domisili'    => "Karawang",
+			'jenis_kelamin'    => 'L',
+			'image'    => "alvian_vito.png",
+			'created_at'    =>  "2023-12-05",
+		  ],
+		  [
+			'nama' => "Toto Abdulpatah",
+			'npm'    => "2110631170146",
+			'prodi'    => 'Informatika',
+			'minat'    => 'Web Developer',
+			'domisili'    => "Karawang",
+			'jenis_kelamin'    => 'L',
+			'image'    => "toto_abdulpatah.jpg",
+			'created_at'    =>  "2023-12-05",
+		  ],
+		];
+		$this->db->table('mahasiswa')->insertBatch($data); // Using Query Builder
+	}
 }
