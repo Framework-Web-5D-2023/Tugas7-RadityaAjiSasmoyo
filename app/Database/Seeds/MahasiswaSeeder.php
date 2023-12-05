@@ -22,7 +22,7 @@ class MahasiswaSeeder extends Seeder {
 			'minat'    => 'Android Developer',
 			'domisili'    => "Karawang",
 			'jenis_kelamin'    => 'L',
-			'image'    => "default.jpg",
+			'image'    => "1700807676_711062b91b19173babd9.jpg",
 			'created_at'    =>  "2000-01-01",
 		  ],
 		  [
@@ -32,7 +32,7 @@ class MahasiswaSeeder extends Seeder {
 			'minat'    => 'Web Developer',
 			'domisili'    => "Karawang",
 			'jenis_kelamin'    => 'L',
-			'image'    => "1700807676_711062b91b19173babd9.jpg",
+			'image'    => "raditya.jpg",
 			'created_at'    =>  "2023-11-24",
 		  ],
 		  [
